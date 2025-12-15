@@ -31,9 +31,7 @@ NLP_Final_Project/
 │ ├── sentiment_mlp_vectorizer.joblib
 │ ├── formality_logreg.joblib
 │ └── ai_vs_human_logreg.joblib
-├── requirements.txt
 ├── README.md
-└── .gitignore
 
 
 ## OpenAI API (Optional)
