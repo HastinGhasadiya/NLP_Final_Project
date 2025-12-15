@@ -3,10 +3,10 @@
 ## Overview
 This project is an NLP-based AI Content Forensics tool that analyzes text to determine:
 - Whether the text is AI-generated or human-written
-- The sentiment of the text (positive / negative)
+- The sentiment of the text (positive or negative)
 - The formality level of the writing
 
-The system also demonstrates how rewriting text can change AI-detection outcomes.
+The system also demonstrates how rewriting text can influence AI-detection outcomes.
 
 ## Models Used
 - Neural Sentiment Classifier (MLP – TensorFlow)
@@ -16,13 +16,50 @@ The system also demonstrates how rewriting text can change AI-detection outcomes
 A logistic regression sentiment baseline was evaluated during development but removed from the final system due to weaker confidence calibration and lexical bias.
 
 ## Features
-- Interactive CLI application
-- AI vs Human detection with probabilities
+- Interactive command-line interface (CLI)
+- AI vs Human classification with probabilities
+- Sentiment and formality analysis
 - Human-style rewriting
 - Adversarial rewriting experiments
 - GPT-based explanations (optional)
 
-## How to Run
-```bash
-pip install -r requirements.txt
-python final_app1.py
+## Project Structure
+NLP_Final_Project/
+├── final_app.py
+├── artifacts/
+│ ├── sentiment_mlp.h5
+│ ├── sentiment_mlp_vectorizer.joblib
+│ ├── formality_logreg.joblib
+│ └── ai_vs_human_logreg.joblib
+├── requirements.txt
+├── README.md
+└── .gitignore
+
+
+## OpenAI API (Optional)
+GPT-based features require an OpenAI API key.
+
+Set the API key as an environment variable:
+
+**Windows**
+setx OPENAI_API_KEY "your_api_key_here"
+
+If no API key is set, the application will still run using only the machine learning classifiers.
+
+## Installation
+Install the required dependencies:
+
+
+python final_app.py
+
+Type text when prompted.  
+Enter `q` to quit the program.
+
+## Notes
+TensorFlow warnings during startup are expected and do not affect functionality.
+
+## Author
+Hastin Ghasadiya
+
+
+
